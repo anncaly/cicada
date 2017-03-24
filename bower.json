@@ -1,0 +1,17 @@
+{
+  "name": "pr2",
+  "description": "practice2",
+  "main": "",
+  "authors": [
+    "ann caly <anncaly@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
