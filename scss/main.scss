@@ -1,5 +1,7 @@
 @import "mixins";
+@import "custom-mixins";
 @import "variables";
+
 %bx-sh {
     box-shadow: 0 2px 3px rgba(0,0,0,0.3);
 }
@@ -16,10 +18,8 @@
     padding: 20px 0;
     @include font-func($font-family, 16px, #333, 700, 1.48);
     @extend %clearfix;
+    @include cicada(council-card,council-card-avatar);
     &-card {
-        @include mq("tablet-l",max) {
-            width: 50%;
-        }
         text-align: center;
         border-radius: 3px;
         background: $bgc;
@@ -33,9 +33,9 @@
             overflow: hidden;
             margin: 0;
             @include push--auto;
-            border-radius: 50%;
+            // border-radius: 50%;
             @extend %bx-sh;
-            transition: all .2s ease-in-out;
+            // transition: all .2s ease-in-out;
             >.img {
                 display: block;
                 min-width: 100%;
@@ -69,4 +69,14 @@
     }
 }
 
+@include mq("phone-p",max) {
+    .col-2 { width: 50%; }
+}
+
 @include grid(12);
+
+.cicada {
+    @include border-radius(random(100) + % random(100) + % random(100) + % random(100) + %);
+    @include transform(random(20) - 10 + deg);
+    @include radius_and_transform();
+}
