@@ -1,0 +1,58 @@
+// начальная инициализация переменных
+@mixin font-func($ff:false, $size:false, $color:false, $weight:false, $lh:false) {
+    @if $ff { font-family: $ff, sans-serif; }
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+
+@mixin round-icon($sz:2em, $round:false) {
+    width: $sz;
+    height: $sz;
+    line-height: $sz;
+    text-align: center;
+    @if $round { border-radius: 50%; }
+}
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+$breakpoints:(
+    "sm-phone-p": 240px,
+    "sm-phone-l": 320px,
+    "phone-p": 480px,
+    "phone-l": 640px,
+    "tablet-p": 768px,
+    "tablet-l": 1024px,
+    "desktop": 1200px,
+    "desktop-l": 1440px
+);
+
+@mixin mq($width, $type:min) {
+    @if map-has-key($breakpoints, $width) {
+        $width: map-get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin grid($cols:12,$class:"col"){
+    @if $cols >1{
+        @for $i from 1 through $cols{
+            .#{$class}-#{$i}{
+                width: 100%/($cols/$i);
+                float: left;
+            }
+        }
+    }
+}
+
