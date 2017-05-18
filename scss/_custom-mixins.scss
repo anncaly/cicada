@@ -29,8 +29,9 @@
 }
 
 @mixin radius_and_transform() {
-    @include border-radius(random(100) + % random(100) + % random(100) + % random(100) + %);
+    @include border-radius(random(50) + 50 + % random(50) + 50 + % random(50) + 50 + % random(50) + 50 + %);
     @include transform(random(20) - 10 + deg);
+    transition: all 1s;
 }
 
 @mixin cicada($parent,$child){

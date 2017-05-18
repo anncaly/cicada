@@ -19,7 +19,7 @@ gulp.task('sass', function(done) {
     return gulp.src('scss/*.scss')
         .pipe(sass())
         // .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('build/css'));
 done();
 });
 
