@@ -33,7 +33,30 @@ $breakpoints:(
     "desktop-l": 1440px
 );
 
-@mixin mq($width, $type:min) {
+
+// @mixin mq($width, $type: min) {
+//     @each $key, $breakpoint in $breakpoints {
+//         $width: map-get($breakpoints, $width);
+//         @media only screen and (#{$type}-width: $width) {
+//             @content;
+//             // .container: $width - 20px;
+//         }
+//     }
+// }
+
+// @mixin grid($cols:12,$class:"col") {
+//     @if $cols > 1 {
+//         @for $i from 1 through $cols {
+//             .#{$class}-#{$i} {
+//                 width: 100% / ($cols/$i);
+//                 float: left;
+//             }
+//         }
+//     }
+// }
+
+
+@mixin mq($width, $type: min) {
     @if map-has-key($breakpoints, $width) {
         $width: map-get($breakpoints, $width);
         @if $type == max {
@@ -45,11 +68,11 @@ $breakpoints:(
     }
 }
 
-@mixin grid($cols:12,$class:"col"){
-    @if $cols >1{
-        @for $i from 1 through $cols{
-            .#{$class}-#{$i}{
-                width: 100%/($cols/$i);
+@mixin grid($cols:12,$class:"col") {
+    @if $cols > 1 {
+        @for $i from 1 through $cols {
+            .#{$class}-#{$i} {
+                width: 100% / ($cols/$i);
                 float: left;
             }
         }

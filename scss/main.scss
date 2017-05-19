@@ -9,10 +9,11 @@
 %clearfix{
     &:after{
         content: '';
-        display: table;
+        display: block;
         clear: both;
     }
 }
+
 
 @include cicada(item, council-card-avatar);
 
@@ -28,6 +29,9 @@
         margin: 20px 0;
         padding: 20px 10px;
         @extend %bx-sh;
+        @include mq("tablet-p",max) {
+            background: red; 
+        }
         &-avatar {
             border: 2px solid $bc;
             width: $psz;
@@ -88,9 +92,9 @@
     }
 }
 
-@include mq("phone-p",max) {
-    .col-2 { width: 50%; }
-}
+// @include mq("phone-p",max) {
+//     .col-2 { width: 50%; }
+// }
 
 @include grid(12);
 

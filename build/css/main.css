@@ -3,70 +3,70 @@
 
 .council:after {
   content: '';
-  display: table;
+  display: block;
   clear: both; }
 
 .item:nth-child(2n+1) .council-card-avatar {
-  border-radius: 56% 64% 87% 67%;
-  transform: 2deg;
-  -webkit-transform: 2deg;
-  -moz-transform: 2deg;
-  -ms-transform: 2deg;
-  -o-transform: 2deg;
+  border-radius: 54% 78% 77% 76%;
+  transform: -9deg;
+  -webkit-transform: -9deg;
+  -moz-transform: -9deg;
+  -ms-transform: -9deg;
+  -o-transform: -9deg;
   transition: all 1s; }
   .item:nth-child(2n+1) .council-card-avatar:hover {
-    border-radius: 56% 54% 92% 88%;
-    transform: 4deg;
-    -webkit-transform: 4deg;
-    -moz-transform: 4deg;
-    -ms-transform: 4deg;
-    -o-transform: 4deg;
+    border-radius: 52% 62% 66% 58%;
+    transform: -6deg;
+    -webkit-transform: -6deg;
+    -moz-transform: -6deg;
+    -ms-transform: -6deg;
+    -o-transform: -6deg;
     transition: all 1s; }
 
 .item:nth-child(3n+2) .council-card-avatar {
-  border-radius: 97% 72% 85% 69%;
-  transform: -2deg;
-  -webkit-transform: -2deg;
-  -moz-transform: -2deg;
-  -ms-transform: -2deg;
-  -o-transform: -2deg;
+  border-radius: 79% 70% 59% 72%;
+  transform: -4deg;
+  -webkit-transform: -4deg;
+  -moz-transform: -4deg;
+  -ms-transform: -4deg;
+  -o-transform: -4deg;
   transition: all 1s; }
   .item:nth-child(3n+2) .council-card-avatar:hover {
-    border-radius: 78% 98% 57% 89%;
-    transform: 7deg;
-    -webkit-transform: 7deg;
-    -moz-transform: 7deg;
-    -ms-transform: 7deg;
-    -o-transform: 7deg;
+    border-radius: 63% 56% 70% 70%;
+    transform: -9deg;
+    -webkit-transform: -9deg;
+    -moz-transform: -9deg;
+    -ms-transform: -9deg;
+    -o-transform: -9deg;
     transition: all 1s; }
 
 .item:nth-child(5n+3) .council-card-avatar {
-  border-radius: 96% 81% 91% 52%;
-  transform: -1deg;
-  -webkit-transform: -1deg;
-  -moz-transform: -1deg;
-  -ms-transform: -1deg;
-  -o-transform: -1deg;
-  transition: all 1s; }
-  .item:nth-child(5n+3) .council-card-avatar:hover {
-    border-radius: 57% 81% 63% 86%;
-    transform: 10deg;
-    -webkit-transform: 10deg;
-    -moz-transform: 10deg;
-    -ms-transform: 10deg;
-    -o-transform: 10deg;
-    transition: all 1s; }
-
-.item:nth-child(7n+5) .council-card-avatar {
-  border-radius: 63% 90% 74% 77%;
+  border-radius: 69% 67% 73% 52%;
   transform: 5deg;
   -webkit-transform: 5deg;
   -moz-transform: 5deg;
   -ms-transform: 5deg;
   -o-transform: 5deg;
   transition: all 1s; }
+  .item:nth-child(5n+3) .council-card-avatar:hover {
+    border-radius: 59% 77% 75% 56%;
+    transform: 0deg;
+    -webkit-transform: 0deg;
+    -moz-transform: 0deg;
+    -ms-transform: 0deg;
+    -o-transform: 0deg;
+    transition: all 1s; }
+
+.item:nth-child(7n+5) .council-card-avatar {
+  border-radius: 76% 61% 57% 74%;
+  transform: 4deg;
+  -webkit-transform: 4deg;
+  -moz-transform: 4deg;
+  -ms-transform: 4deg;
+  -o-transform: 4deg;
+  transition: all 1s; }
   .item:nth-child(7n+5) .council-card-avatar:hover {
-    border-radius: 73% 94% 80% 52%;
+    border-radius: 57% 54% 64% 75%;
     transform: -6deg;
     -webkit-transform: -6deg;
     -moz-transform: -6deg;
@@ -75,20 +75,20 @@
     transition: all 1s; }
 
 .item:nth-child(11n+7) .council-card-avatar {
-  border-radius: 92% 85% 86% 56%;
-  transform: 8deg;
-  -webkit-transform: 8deg;
-  -moz-transform: 8deg;
-  -ms-transform: 8deg;
-  -o-transform: 8deg;
+  border-radius: 77% 54% 60% 77%;
+  transform: 4deg;
+  -webkit-transform: 4deg;
+  -moz-transform: 4deg;
+  -ms-transform: 4deg;
+  -o-transform: 4deg;
   transition: all 1s; }
   .item:nth-child(11n+7) .council-card-avatar:hover {
-    border-radius: 99% 85% 76% 91%;
-    transform: -8deg;
-    -webkit-transform: -8deg;
-    -moz-transform: -8deg;
-    -ms-transform: -8deg;
-    -o-transform: -8deg;
+    border-radius: 55% 76% 60% 70%;
+    transform: 10deg;
+    -webkit-transform: 10deg;
+    -moz-transform: 10deg;
+    -ms-transform: 10deg;
+    -o-transform: 10deg;
     transition: all 1s; }
 
 .council {
@@ -104,6 +104,9 @@
     background: #fafafa;
     margin: 20px 0;
     padding: 20px 10px; }
+    @media only screen and (max-width: 767px) {
+      .council-card {
+        background: red; } }
     .council-card-avatar {
       border: 2px solid #46c0c6;
       width: 128px;
@@ -149,10 +152,6 @@
         height: 3px;
         background: #46c0c6;
         margin-bottom: 20px; }
-
-@media only screen and (max-width: 479px) {
-  .col-2 {
-    width: 50%; } }
 
 .col-1 {
   width: 8.33333%;
