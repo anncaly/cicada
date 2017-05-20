@@ -17,7 +17,14 @@
 
 @include cicada(item, council-card-avatar);
 
+.container {
+    margin: 0 auto;
+}
+
 .council {
+    // .item {
+    //     margin: 7px 7px;
+    // }
     padding: 20px 0;
     @include font-func($font-family, 16px, #333, 700, 1.48);
     @extend %clearfix;
@@ -26,12 +33,12 @@
         text-align: center;
         border-radius: 3px;
         background: $bgc;
-        margin: 20px 0;
+        margin: 7px 7px;
         padding: 20px 10px;
         @extend %bx-sh;
-        @include mq("tablet-p",max) {
-            background: red; 
-        }
+        // @include mq("tablet-p",max) {
+        //     background: red; 
+        // }
         &-avatar {
             border: 2px solid $bc;
             width: $psz;
@@ -97,6 +104,7 @@
 // }
 
 @include grid(12);
+@include responsive-grid(12);
 
 // @include cicada(".council-card", ".council-card-avatar");
 
